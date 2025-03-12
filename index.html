@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사고도우미 AI - Coming Soon</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .countdown {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #ffeeba;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .description {
+            font-size: 20px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    <script>
+        function updateCountdown() {
+            const launchDate = new Date("2025-05-01T00:00:00").getTime();
+            const now = new Date().getTime();
+            const diff = launchDate - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById("countdown").innerHTML = `${days}일 ${hours}시간 ${minutes}분 ${seconds}초 남았습니다.`;
+        }
+        setInterval(updateCountdown, 1000);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 사고도우미 AI - Coming Soon! 🚀</h1>
+        <p class="description">당신의 사고 처리 도우미, **AI 기반 자동 상담 & 보상 예측 서비스**가 곧 출시됩니다!</p>
+        <p class="description">📅 런칭 예정일: **2025년 5월 1일**</p>
+        <div class="countdown" id="countdown">로딩 중...</div>
+        <p class="description">곧 더 빠르고 편리한 사고 처리 서비스를 만나보세요!</p>
+    </div>
+</body>
+</html>
