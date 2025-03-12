@@ -8,7 +8,7 @@
         body {
             font-family: 'Arial', sans-serif;
             text-align: center;
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            background: linear-gradient(to right, #1e3c72, #2a5298);
             margin: 0;
             padding: 0;
             color: white;
@@ -17,30 +17,52 @@
             max-width: 800px;
             margin: 80px auto;
             padding: 40px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             border-radius: 15px;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(10px);
+            animation: fadeIn 1.5s ease-in-out;
         }
         h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #f0f8ff;
         }
         .countdown {
-            font-size: 30px;
+            font-size: 32px;
             font-weight: bold;
             margin: 20px 0;
-            color: #ffeeba;
-            animation: fadeIn 1s ease-in-out;
+            color: #ffcc00;
+            animation: pulse 1.5s infinite alternate;
         }
         .description {
             font-size: 20px;
             margin-bottom: 20px;
             line-height: 1.6;
+            color: #f8f9fa;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 30px;
+            }
+            h1 {
+                font-size: 36px;
+            }
+            .countdown {
+                font-size: 28px;
+            }
+            .description {
+                font-size: 18px;
+            }
         }
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
         }
     </style>
     <script>
@@ -62,8 +84,8 @@
 <body>
     <div class="container">
         <h1>🚀 사고도우미 AI - Coming Soon! 🚀</h1>
-        <p class="description">당신의 사고 처리 도우미, **AI 기반 자동 상담 & 보상 예측 서비스**가 곧 출시됩니다!</p>
-        <p class="description">📅 런칭 예정일: **2025년 5월 1일**</p>
+        <p class="description">당신의 사고 처리 도우미, <strong>AI 기반 자동 상담 & 보상 예측 서비스</strong>가 곧 출시됩니다!</p>
+        <p class="description">📅 런칭 예정일: <strong>2025년 5월 1일</strong></p>
         <div class="countdown" id="countdown">로딩 중...</div>
         <p class="description">곧 더 빠르고 편리한 사고 처리 서비스를 만나보세요!</p>
     </div>
